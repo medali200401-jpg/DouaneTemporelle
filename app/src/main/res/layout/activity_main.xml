@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_titre_ml"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:gravity="center"
+            android:text="DOUANE TEMPORELLE"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txt_nom_ml"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24sp"
+            android:text="Nom du voyageur" />
+
+        <EditText
+            android:id="@+id/edt_nom_ml"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="votre nom"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/txt_naissance_ml"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Annee de naissance" />
+
+        <EditText
+            android:id="@+id/edt_naissance_ml"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="annee"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/txt_destination_ml"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Annee de destination" />
+
+        <EditText
+            android:id="@+id/edt_destination_ml"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="annee"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/txt_motif_ml"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Motif du voyage" />
+
+        <RadioGroup
+            android:id="@+id/rg_motif_ml"
+            android:layout_width="match_parent"
+            android:layout_height="158dp">
+
+            <RadioButton
+                android:id="@+id/rb_tourisme_ml"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tourisme" />
+
+            <RadioButton
+                android:id="@+id/rb_modification_ml"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modification du passe" />
+
+            <RadioButton
+                android:id="@+id/rb_fuite_ml"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fuite" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_inspecter_ml"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Inspecter le profil" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
