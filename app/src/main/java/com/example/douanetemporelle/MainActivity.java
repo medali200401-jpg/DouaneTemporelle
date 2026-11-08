@@ -29,12 +29,65 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        //kol variables ykho l valeur 7asb l id edtNom tkhth nom l voyageur w be9i l variables nfs l operation
+        //kol variable y3ml liaison m3a l variable nfso fi xml
         edtNom = findViewById(R.id.edt_nom_ml);
         edtNaissance = findViewById(R.id.edt_naissance_ml);
         edtDestination = findViewById(R.id.edt_destination_ml);
         rgMotif = findViewById(R.id.rg_motif_ml);
         btnInspecter = findViewById(R.id.btn_inspecter_ml);
+
+        btnInspecter.setOnClickListener(v-> {
+            //variables ykhtho l valeurs mn variables li liées m3a xml
+
+            String nom = edtNom.getText().toString().trim();
+            String naissanceTexte = edtNaissance.getText().toString().trim();
+            String destinationTexte = edtDestination.getText().toString().trim();
+
+            //verification ll variables
+
+            if (nom.isEmpty()) {
+                edtNom.setError("Veuillez saisir le nom");
+                return;
+            }
+
+            if (naissanceTexte.isEmpty()) {
+                edtNaissance.setError("Veuillez saisir l'année de naissance");
+                return;
+            }
+
+            if (destinationTexte.isEmpty()) {
+                edtDestination.setError("Veuillez saisir l'année de destination");
+                return;
+            }
+
+            int naissance;
+            int destination;
+
+            try {
+                naissance = Integer.parseInt(naissanceTexte);
+            } catch (NumberFormatException e) {
+
+                edtNaissance.setError("annee invalide");
+                return;
+            }
+
+            try{
+                destination = Integer.parseInt(destinationTexte);
+            } catch (NumberFormatException e) {
+
+                edtDestination.setError("annee invalide");
+                return;
+            }
+            // verifiacation : destination lezm tkon > naissance
+            if ( destination <= naissance) {
+
+                edtDestination.setError("L'annee doit etre > annee de naissance");
+
+                return;
+            }
+
+
+        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

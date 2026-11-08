@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="annee"
-            android:inputType="text" />
+            android:inputType="number" />
 
         <TextView
             android:id="@+id/txt_motif_ml"
