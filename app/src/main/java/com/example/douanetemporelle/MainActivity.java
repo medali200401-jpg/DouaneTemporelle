@@ -86,6 +86,22 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
 
+            // id button li khtaro l utilisateur
+            int radioId = rgMotif.getCheckedRadioButtonId();
+
+            //itha l'utilisateur khtar motif ou le
+            if ( radioId == -1) {
+                return;
+            }
+
+            //yrj3 lbutton li khtarha l utilisateur
+            RadioButton radioButton = findViewById(radioId);
+
+            //l motif li khtaro l utilisateur (Tourisme,Modification, Fuite)
+            String motif = radioButton.getText().toString();
+
+
+
 
         });
 
