@@ -109,14 +109,14 @@ public class MainActivity extends AppCompatActivity {
             //l motif li khtaro l utilisateur (Tourisme,Modification, Fuite)
             String motif = radioButton.getText().toString();
 
-
+            //creatoin intent thz ll VerificationActivity
             Intent intent = new Intent(MainActivity.this, VerificationActivity.class);
-
+            //variables transferer mn MainActivity l VerifactionActivity
             intent.putExtra(cle(MATRICULE, "NOM_VOYAGEUR"),nom);
             intent.putExtra(cle(MATRICULE, "ANNEE_NAISSANCE"),naissance);
             intent.putExtra(cle(MATRICULE, "ANNEE_DESTINATION"),destination);
             intent.putExtra(cle(MATRICULE, "MOTIF"),motif);
-
+            //nbdlo interface twali VerificationActiivity
             startActivity(intent);
 
 

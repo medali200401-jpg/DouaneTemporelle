@@ -1,10 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     tools:context=".VerificationActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7">
+
+        <TextView
+            android:id="@+id/txtv_nom_ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom du voyageur :" />
+
+        <TextView
+            android:id="@+id/txt_age_ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtv_nom_ml"
+            android:text="Age :" />
+
+        <TextView
+            android:id="@+id/txtv_motif_ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_age_ml"
+            android:text="Motif :" />
+
+        <Button
+            android:id="@+id/btnv_approuver_ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtv_motif_ml"
+            android:text="Approuver le saut temporel" />
+
+        <Button
+            android:id="@+id/btnv_refuser_ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnv_approuver_ml"
+            android:text="Refuser (Risque de  paradoxe)" />
+    </RelativeLayout>
+</LinearLayout>
