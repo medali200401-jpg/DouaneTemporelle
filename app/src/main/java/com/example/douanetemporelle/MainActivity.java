@@ -23,6 +23,15 @@ public class MainActivity extends AppCompatActivity {
     private RadioGroup rgMotif;
     private Button btnInspecter;
 
+    //derniers 4 num mn carte etudiant 7264
+    private static final String MATRICULE = "7264";
+    //cree clee l intent
+    public static String cle(String matricule, String nomCle) {
+        return matricule + "_" + nomCle;
+    }
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,6 +110,16 @@ public class MainActivity extends AppCompatActivity {
             String motif = radioButton.getText().toString();
 
 
+            Intent intent = new Intent(MainActivity.this, VerificationActivity.class);
+
+            intent.putExtra(cle(MATRICULE, "NOM_VOYAGEUR"),nom);
+            intent.putExtra(cle(MATRICULE, "ANNEE_NAISSANCE"),naissance);
+            intent.putExtra(cle(MATRICULE, "ANNEE_DESTINATION"),destination);
+            intent.putExtra(cle(MATRICULE, "MOTIF"),motif);
+
+            startActivity(intent);
+
+
 
 
         });
@@ -111,4 +130,9 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+
+
+
+
 }
