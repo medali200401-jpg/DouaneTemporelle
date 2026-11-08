@@ -27,7 +27,7 @@
             android:text="Nom du voyageur :" />
 
         <TextView
-            android:id="@+id/txt_age_ml"
+            android:id="@+id/txtv_age_ml"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/txtv_nom_ml"
@@ -37,7 +37,7 @@
             android:id="@+id/txtv_motif_ml"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/txt_age_ml"
+            android:layout_below="@id/txtv_age_ml"
             android:text="Motif :" />
 
         <Button

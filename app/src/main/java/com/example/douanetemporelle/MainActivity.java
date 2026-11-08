@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnInspecter;
 
     //derniers 4 num mn carte etudiant 7264
-    private static final String MATRICULE = "7264";
+    public static final String MATRICULE = "7264";
     //cree clee l intent
     public static String cle(String matricule, String nomCle) {
         return matricule + "_" + nomCle;
